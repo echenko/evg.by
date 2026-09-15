@@ -9,3 +9,7 @@
     visibility: visible !important;
     opacity: 1 !important;
 }
+
+.auth__guest, .auth__user {
+    display: flex !important;
+}
