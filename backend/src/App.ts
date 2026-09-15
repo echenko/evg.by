@@ -2,6 +2,7 @@ import express, { Application } from 'express';
 import cors from 'cors';
 import { Database } from './config/Database';
 import { UserRoutes } from './routes/UserRoutes';
+import { AuthRoutes } from './routes/AuthRoutes';
 
 export class App {
     private app: Application;
@@ -16,12 +17,18 @@ export class App {
 
     private middlewares() {
         this.app.use(express.json());
+        
+        this.app.use(express.urlencoded({ extended: true }));
+        
         this.app.use(cors());
     }
 
     private routes() {
         const userRoutes = new UserRoutes();
         this.app.use('/api/users', userRoutes.router);
+        
+        const authRoutes = new AuthRoutes();
+        this.app.use('/api/auth', authRoutes.router);
     }
 
     public async start() {

@@ -1,0 +1,46 @@
+// Colors palette
+$primary-color: #e2e2e2;
+$primary-hover: #0026ff;
+
+// Colors text
+$primary-text-color: #000000;
+
+// Colors background
+$primary-bg-color: #ffffff;
+$secondary-bg-color: #e2e2e2;
+
+// Colors accent
+$primary-accent-color: #535bf2;
+
+// Colors border
+$primary-border-color: #bbbbbb;
+
+// Colors link
+$primary-link-color: #000000;
+$primary-link-color-hover: #e2e2e2;
+
+// Breakpoints
+$breakpoint-mobile: 425px;
+$breakpoint-tablet: 768px;
+$breakpoint-desktop: 992px;
+
+// Spacing
+$spacing-xs: 6px;
+$spacing-sm: 12px;
+$spacing-md: 18px;
+$spacing-lg: 24px;
+
+// Box shadow
+$box-shadow-xs: 0 2px 4px rgba(0, 0, 0, 0.5);
+
+// Border
+$border-xs: 2px solid $primary-border-color;
+
+// Fonts family
+$font-family: 'Inter', system-ui, Avenir, Helvetica, Arial, sans-serif;
+
+// Font sizes
+$font-size-xs: 16px;
+$font-size-sm: 20px;
+$font-size-md: 24px;
+$font-size-lg: 32px;

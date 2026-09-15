@@ -1,0 +1,17 @@
+@use './common/variables' as *;
+@use './common/base';
+@use './common/mixins';
+
+@use './blocks/page';
+
+@use './blocks/header';
+@use './blocks/main';
+@use './blocks/footer';
+
+@use './blocks/auth';
+
+@use './blocks/logo';
+
+@use './blocks/menu';
+
+@use './blocks/form';

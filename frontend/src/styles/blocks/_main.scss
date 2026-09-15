@@ -1,0 +1,43 @@
+@use './../common/variables' as *;
+
+.main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: start;
+}
+
+.main__form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: start;
+    gap: 10px;
+    width: 100%;
+}
+
+.main__text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: start;
+    gap: 10px;
+    width: 100%;
+}
+
+.main__text a {
+    display: block;
+    padding: $spacing-xs;
+    text-decoration: none;
+    color: $primary-link-color;
+    font-weight: 600;
+    font-size: $font-size-xs;
+    line-height: 16px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+
+    &:hover {
+        transition: all 0.3s ease-in-out;
+        transform: scale(1.2);   
+    }
+}

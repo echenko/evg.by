@@ -1,0 +1,41 @@
+@use './../common/variables' as *;
+
+.header {
+    position: relative;
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: $spacing-sm;
+    align-items: center;
+    width: 100%;
+    padding: $spacing-sm;
+    box-shadow: $box-shadow-xs;
+}
+
+.header__menu-button {
+    padding: $spacing-sm;
+    grid-column: 2 / 3;
+    grid-row: 1 / 2;
+}
+
+.header__auth {
+    grid-column: 1 / 3;
+    grid-row: 2 / 3;
+}
+
+.header__dropdown {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    padding: $spacing-sm;
+    background-color: $primary-bg-color;
+    z-index: 1;
+    box-shadow: $box-shadow-xs;
+    transition: transform 0.6s ease-in-out;
+    transform: translateY(-200px) rotate(45deg);
+    cursor: pointer;
+
+    &--active {
+        transform: translateY(100%) rotate(0deg);
+        cursor: default;
+    }
+}

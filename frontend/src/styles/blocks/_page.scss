@@ -1,0 +1,9 @@
+@use './../common/variables' as *;
+
+.page.page--index {
+    max-width: $breakpoint-mobile;
+    margin: 0 auto;
+    padding: $spacing-sm;
+    border: $border-xs;
+    box-shadow: $box-shadow-xs;
+}

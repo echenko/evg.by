@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>EVG.BY | Register</title>
+    <noscript>
+        <link rel="stylesheet" href="./src/styles/common/_noscript.scss" />
+    </noscript>
+    <link rel="stylesheet" href="./src/styles/index.scss" />
+</head>
+
+<body class="page page--index no-js">
+<header class="header">
+    <div class="header__container logo">
+        <a class="logo__link" href="/">evg.by</a>
+    </div>
+    
+    <button class="header__menu-button" type="button">Menu</button>
+    
+        <div class="header__auth">
+            <div class="auth">
+                <div class="auth__guest auth__guest--hidden">
+                    <a class="auth__link auth__link--login" href="./login.html">Login</a>
+                    <a class="auth__link auth__link--register" href="./register.html">Register</a>
+                </div>
+                
+                <div class="auth__user auth__user--hidden">
+                    <span class="auth__name">John Doe</span>
+                    <button class="auth__logout" type="button">Logout</button>
+                </div>
+            </div>
+        </div>
+
+    <div class="header__dropdown dropdown">
+        <nav class="dropdown__nav menu">
+            <ul class="menu__list">
+                <li class="menu__item"><a class="menu__link" href="/">Home</a></li>
+                <li class="menu__item"><a class="menu__link" href="./about">About</a></li>
+                <li class="menu__item"><a class="menu__link" href="./contact">Contact</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+    <main class="main">
+        <div class="main__form">
+            <h2 class="main__title">Register</h2>
+            
+            <form class="form form--register" action="/api/auth/register" method="POST" id="registerForm">
+                <fieldset class="form__fieldset">
+                    <legend class="form__legend">Sign Up</legend>
+                    
+                    <label class="form__label">
+                        <span class="form__label-text">Email</span>
+                        <input class="form__input" type="email" name="email" required autocomplete="email" />
+                    </label>
+                    
+                    <label class="form__label">
+                        <span class="form__label-text">Password</span>
+                        <input class="form__input" type="password" name="password" required autocomplete="new-password" minlength="8" />
+                    </label>
+
+                    <label class="form__label">
+                        <span class="form__label-text">Confirm Password</span>
+                        <input class="form__input" type="password" name="confirmPassword" required autocomplete="new-password" minlength="8" />
+                    </label>
+                    
+                    <label class="form__label">
+                        <span class="form__label-text">I agree to the privacy policy</span>
+                        <input class="form__input" type="checkbox" name="policy" required />
+                    </label>
+                    
+                    <button class="form__submit" type="submit">Sign Up</button>
+                </fieldset>
+                
+                <div class="form__message" aria-live="polite"></div>
+            </form>
+
+            <p class="main__text">
+                Already have an account? 
+                <a href="./login.html" class="main__link">Login</a>
+            </p>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="footer__container">
+            <p class="footer__text">© 2026 EVG.BY. All rights reserved</p>
+        </div>
+    </footer>
+
+    <script type="module" src="./src/scripts/register.ts"></script>
+</body>
+
+</html>

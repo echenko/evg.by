@@ -1,23 +1,28 @@
 {
   "name": "evg.by",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "main": "index.js",
   "scripts": {
-   "dev": "concurrently -k -n \"MONGO,BACKEND,FRONTEND\" -c \"blue,green,magenta\" --hide \"MONGO\" \"npm run dev:mongo\" \"npm run dev:backend\" \"npm run dev:frontend\"",
+    "dev": "concurrently -k -n \"MONGO,BACKEND,FRONTEND\" -c \"blue,green,magenta\" --hide \"MONGO\" \"npm run dev:mongo\" \"npm run dev:backend\" \"npm run dev:frontend\"",
     "dev:mongo": "docker compose -f docker-compose.dev.yml up",
     "dev:backend": "cd backend && npm run dev",
     "dev:frontend": "cd frontend && npm run dev",
     "stop": "docker compose -f docker-compose.dev.yml down",
-    "clean": "docker compose -f docker-compose.dev.yml down -v",
-    "logs:mongo": "docker logs -f evg-mongo"
+    "clean": "docker compose -f docker-compose.dev.yml down -v"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "description": "",
   "devDependencies": {
+    "@types/bcrypt": "6.0.0",
+    "@types/jsonwebtoken": "9.0.10",
     "concurrently": "10.0.5",
     "cross-env": "10.1.0",
     "wait-on": "9.1.0"
+  },
+  "dependencies": {
+    "bcrypt": "6.0.0",
+    "jsonwebtoken": "9.0.3"
   }
 }

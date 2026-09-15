@@ -1,0 +1,48 @@
+@use './../common/variables' as *;
+
+.auth {
+    width: 100%;
+    height: 25px;
+}
+
+.auth__guest {
+    display: flex;
+    flex-grow: 1;
+    align-items: end;
+    gap: 10px;
+}
+
+.auth__link {
+    display: block;
+    padding: $spacing-xs;
+    text-decoration: none;
+    color: $primary-link-color;
+    font-weight: 600;
+    font-size: $font-size-xs;
+    line-height: 16px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+
+    &:hover {
+        transition: all 0.3s ease-in-out;
+        transform: scale(1.2);   
+    }
+}
+
+.auth__user {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.auth__guest--hidden {
+    display: none;
+    visibility: hidden;
+}
+
+.auth__user--hidden {
+    display: none;
+    visibility: hidden;
+}
+

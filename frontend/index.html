@@ -1,13 +1,62 @@
-<!doctype html>
-<html lang="en">
-  <head>
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>frontend</title>
-  </head>
-  <body>
-    <div id="app"></div>
-    <script type="module" src="/src/main.ts"></script>
-  </body>
+    <title>EVG.BY | Main</title>
+    <noscript>
+        <link rel="stylesheet" href="./src/styles/common/_noscript.scss" />
+    </noscript>
+    <link rel="stylesheet" href="./src/styles/index.scss" />
+</head>
+
+<body class="page page--index no-js">
+<header class="header">
+    <div class="header__container logo">
+        <a class="logo__link" href="/">evg.by</a>
+    </div>
+    
+    <button class="header__menu-button" type="button">Menu</button>
+    
+        <div class="header__auth">
+            <div class="auth">
+                <div class="auth__guest auth__guest--hidden">
+                    <a class="auth__link auth__link--login" href="./login.html">Login</a>
+                    <a class="auth__link auth__link--register" href="./register.html">Register</a>
+                </div>
+                
+                <div class="auth__user auth__user--hidden">
+                    <span class="auth__name">John Doe</span>
+                    <button class="auth__logout" type="button">Logout</button>
+                </div>
+            </div>
+        </div>
+
+    <div class="header__dropdown dropdown">
+        <nav class="dropdown__nav menu">
+            <ul class="menu__list">
+                <li class="menu__item"><a class="menu__link" href="/">Home</a></li>
+                <li class="menu__item"><a class="menu__link" href="./about">About</a></li>
+                <li class="menu__item"><a class="menu__link" href="./contact">Contact</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+    <main class="main">
+        <h2 class="main__title">Welcome to EVG.BY</h2>
+        <p class="main__text">This is a simple web application built with TypeScript and MongoDB.</p>
+
+    </main>
+
+    <footer class="footer">
+        <div class="footer__container">
+            <p class="footer__text">© 2026 EVG.BY. All rights reserved</p>
+        </div>
+    </footer>
+
+    <script type="module" src="./src/scripts/index.ts"></script>
+</body>
+
 </html>
